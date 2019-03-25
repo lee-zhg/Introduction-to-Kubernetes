@@ -7,6 +7,7 @@ the IBM Container Service.
 
 If following this lab as part of an IBM instructor led workshop, please follow these instructions to setup your workshop environment: https://gist.github.com/jzaccone/0cdc321e5dc8adb0dca98ca861284c01
 
+
 # 1. Deploy your application
 
 In this part of the lab we will deploy an application called `guestbook`
