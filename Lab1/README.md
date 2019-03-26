@@ -79,13 +79,6 @@ that has already been built and uploaded to DockerHub under the name
    
 Congratulations, you've now deployed an application to Kubernetes!
 
-When you're all done, you can either use this deployment in the
-[next lab of this course](../Lab2/README.md), or you can remove the deployment
-and thus stop taking the course.
+When you're all done, continue to the
+[next lab of this course](../Lab2/README.md).
 
-  1. To remove the deployment, use `$ kubectl delete deployment guestbook`.
-
-  2. To remove the service, use `$ kubectl delete service guestbook`.
-
-You should now go back up to the root of the repository in preparation
-for the next lab: `$ cd ..`.
