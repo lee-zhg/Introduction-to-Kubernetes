@@ -150,7 +150,7 @@ To update and roll back:
    `$ ibmcloud ks workers $USER-cluster`
 
    To verify that you're running "v2" of guestbook, look at the title of the page,
-   it should now be `Guestbook - v2`. If you are using a browser, make sure you force refresh (invalidating your cache). For chrome to force refresh use `command + shift + R`
+   it should now be `Guestbook - v2`. If you are using a browser, make sure you force refresh (invalidating your cache).
 
 5. If you want to undo your latest rollout, use:
    ```console
