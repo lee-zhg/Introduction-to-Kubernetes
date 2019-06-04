@@ -47,9 +47,10 @@ Consider the following deployment configuration for guestbook application
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook
+  name: guestbook-v1
   labels:
     app: guestbook
+    version: "1.0"
 spec:
   replicas: 3
   selector:
@@ -59,6 +60,7 @@ spec:
     metadata:
       labels:
         app: guestbook
+        version: "1.0"
     spec:
       containers:
       - name: guestbook
@@ -81,7 +83,7 @@ all times.
 
    ``` console
    $ kubectl create -f guestbook-deployment.yaml
-   deployment "guestbook" created
+   deployment.apps/guestbook-v1 created
    ```
 
 - List the pod with label app=guestbook
@@ -100,7 +102,7 @@ try to add, or remove, pods from the system to match your request. To can
 make these modifications by using the following command:
 
    ```console
-   $ kubectl edit deployment guestbook
+   $ kubectl edit deployment guestbook-v1
    ```
 
 This will retrieve the latest configuration for the Deployment from the
@@ -201,7 +203,7 @@ spec:
     spec:
       containers:
       - name: redis-master
-        image: redis:2.8.23
+        image: redis:5.0.5
         ports:
         - name: redis-server
           containerPort: 6379
@@ -277,7 +279,7 @@ port 6379 on the pods selected by the selectors "app=redis" and "role=master".
 - Restart guestbook so that it will find the redis service to use database:
 
     ```console
-    $ kubectl delete deploy guestbook 
+    $ kubectl delete deploy guestbook-v1
     $ kubectl create -f guestbook-deployment.yaml
     ```
 
@@ -328,7 +330,7 @@ spec:
     spec:
       containers:
       - name: redis-slave
-        image: kubernetes/redis-slave:v2
+        image: clouddragons/redis-slave:v1
         ports:
         - name: redis-server
           containerPort: 6379
@@ -386,7 +388,7 @@ spec:
 
 - Restart guestbook so that it will find the slave service to read from.
     ```console
-    $ kubectl delete deploy guestbook
+    $ kubectl delete deploy guestbook-v1
     $ kubectl create -f guestbook-deployment.yaml
     ```
     
