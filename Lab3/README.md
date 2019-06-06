@@ -203,7 +203,7 @@ spec:
     spec:
       containers:
       - name: redis-master
-        image: redis:5.0.5
+        image: redis:3.2.9
         ports:
         - name: redis-server
           containerPort: 6379
@@ -330,7 +330,7 @@ spec:
     spec:
       containers:
       - name: redis-slave
-        image: clouddragons/redis-slave:v1
+        image: ibmcom/guestbook-redis-slave:v2
         ports:
         - name: redis-server
           containerPort: 6379
