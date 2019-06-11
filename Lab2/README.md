@@ -147,7 +147,7 @@ To update and roll back:
 
    `$ kubectl describe service guestbook`
    and
-   `$ ibmcloud ks workers $USER-cluster`
+   `$ ibmcloud ks workers $USERNAME-cluster`
 
    To verify that you're running "v2" of guestbook, look at the title of the page,
    it should now be `Guestbook - v2`. If you are using a browser, make sure you force refresh (invalidating your cache).
