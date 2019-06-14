@@ -2,7 +2,7 @@
 
 In this lab, you'll learn how to update the number of instances
 a deployment has and how to safely roll out an update of your application
-on Kubernetes. 
+on Kubernetes.
 
 For this lab, you need a running deployment of the `guestbook` application
 from the previous lab. If you deleted it, recreate it using:
@@ -10,8 +10,8 @@ from the previous lab. If you deleted it, recreate it using:
 ```console
 $ kubectl run guestbook --image=ibmcom/guestbook:v1
 ```
-    
-# 1. Scale apps with replicas
+
+## 1. Scale apps with replicas
 
 A *replica* is a copy of a pod that contains a running service. By having
 multiple replicas of a pod, you can ensure your deployment has the available
@@ -30,7 +30,7 @@ resources to handle increasing load on your application.
    10 replicas by starting 9 new pods with the same configuration as
    the first.
 
-4. To see your changes being rolled out, you can run:
+1. To see your changes being rolled out, you can run:
    `kubectl rollout status deployment guestbook`.
 
    The rollout might occur so quickly that the following messages might
@@ -50,7 +50,7 @@ resources to handle increasing load on your application.
    deployment "guestbook" successfully rolled out
    ```
 
-5. Once the rollout has finished, ensure your pods are running by using:
+1. Once the rollout has finished, ensure your pods are running by using:
    `kubectl get pods`.
 
    You should see output listing 10 replicas of your deployment:
@@ -76,7 +76,7 @@ to your deployment, as shown in the following diagram:
 
 ![HA with more clusters and regions](../images/cluster_ha_roadmap.png)
 
-# 2. Update and roll back apps
+## 2. Update and roll back apps
 
 Kubernetes allows you to do rolling upgrade of your application to a new
 container image. This allows you to easily update the running image and also allows you to
@@ -86,6 +86,7 @@ In the previous lab, we used an image with a `v1` tag. For our upgrade
 we'll use the image with the `v2` tag.
 
 To update and roll back:
+
 1. Using `kubectl`, you can now update your deployment to use the
    `v2` image. `kubectl` allows you to change details about existing
    resources with the `set` subcommand. We can use it to change the
@@ -99,7 +100,7 @@ To update and roll back:
    Multiple containers can be updated at the same time.
    ([More information](https://kubernetes.io/docs/user-guide/kubectl/kubectl_set_image/).)
 
-3. Run `kubectl rollout status deployment/guestbook` to check the status of
+1. Run `kubectl rollout status deployment/guestbook` to check the status of
    the rollout. The rollout might occur so quickly that the following messages
    might _not_ display:
 
@@ -140,7 +141,7 @@ To update and roll back:
    deployment "guestbook" successfully rolled out
    ```
 
-4. Test the application as before, by accessing `<public-IP>:<nodeport>` 
+1. Test the application as before, by accessing `<public-IP>:<nodeport>` 
    in the browser to confirm your new code is active.
 
    Remember, to get the "nodeport" and "public-ip" use:
@@ -152,7 +153,8 @@ To update and roll back:
    To verify that you're running "v2" of guestbook, look at the title of the page,
    it should now be `Guestbook - v2`. If you are using a browser, make sure you force refresh (invalidating your cache).
 
-5. If you want to undo your latest rollout, use:
+1. If you want to undo your latest rollout, use:
+
    ```console
    $ kubectl rollout undo deployment guestbook
    deployment "guestbook"
@@ -160,13 +162,14 @@ To update and roll back:
 
    You can then use `kubectl rollout status deployment/guestbook` to see
    the status.
-   
-6. When doing a rollout, you see references to *old* replicas and *new* replicas.
+
+1. When doing a rollout, you see references to *old* replicas and *new* replicas.
    The *old* replicas are the original 10 pods deployed when we scaled the application.
    The *new* replicas come from the newly created pods with the different image.
    All of these pods are owned by the Deployment.
    The deployment manages these two sets of pods with a resource called a ReplicaSet.
    We can see the guestbook ReplicaSets with:
+
    ```console
    $ kubectl get replicasets -l run=guestbook
    NAME                   DESIRED   CURRENT   READY     AGE
@@ -182,4 +185,4 @@ a different way to achieve the same results:
  To remove the service, use `kubectl delete service guestbook`.
 
 Congratulations! You deployed the second version of the app. Lab 2
-is now complete.
+is now complete. Continue to the [next lab of this course](../Lab3/README.md).
