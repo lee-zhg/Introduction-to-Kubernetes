@@ -4,7 +4,7 @@
 
 ## Lab overview
 
-[Lab 0](Lab0): Setup - if you do now have access to a kubernetes environment, follow the suggestions here to get one. If you are in an IBM workshop and have already signed in to your kubernetes cluster, skip this lab and start with [Lab 1](Lab1).
+[Lab 0](Lab0): Setup - if you do not have access to a kubernetes environment, follow the suggestions here to get one. If you are in an IBM workshop and have already signed in to your kubernetes cluster, skip this lab and start with [Lab 1](Lab1).
 
 [Lab 1](Lab1): This lab walks through creating and deploying a simple "guestbook" app written in Go as a net/http Server and accessing it.
 
