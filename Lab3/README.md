@@ -22,7 +22,7 @@ as well as the configuration files we'll use to deploy the pieces of the applica
 
 2. Change directory 
   ```
-  cd guestbook/v1
+  $ cd guestbook/v1
   ```
   
 ## 1. Scale apps natively
