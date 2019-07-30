@@ -9,7 +9,7 @@ In this part of the lab we will deploy an application called `guestbook`
 that has already been built and uploaded to DockerHub under the name
 `ibmcom/guestbook:v1`.
 
-1. Start by running `guestbook`:
+1. Start by running `guestbook` in the Command window or terminal window:
 
    ```$ kubectl run guestbook --image=ibmcom/guestbook:v1```
 
