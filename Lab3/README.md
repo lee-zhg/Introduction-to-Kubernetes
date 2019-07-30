@@ -7,7 +7,7 @@ configuration files. The configuration file mechanism allows you to have more
 fine-grained control over all of resources being created within the
 Kubernetes cluster.
 
-## 1. Preparation
+## 0. Preparation
 
 Before we work with the application,
 
