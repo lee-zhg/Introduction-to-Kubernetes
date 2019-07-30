@@ -7,18 +7,24 @@ configuration files. The configuration file mechanism allows you to have more
 fine-grained control over all of resources being created within the
 Kubernetes cluster.
 
-Before we work with the application we need to clone a github repo:
+## 1. Preparation
 
-```
-$ git clone https://github.com/IBM/guestbook.git
-```
+Before we work with the application,
+
+1. Clone a github repo:
+
+  ```
+  $ git clone https://github.com/IBM/guestbook.git
+  ```
 
 This repo contains multiple versions of the guestbook application
 as well as the configuration files we'll use to deploy the pieces of the application.
 
-Change directory by running the command `cd guestbook`. You will find all the
-configurations files for this exercise under the directory `v1`.
-
+2. Change directory 
+  ```
+  cd guestbook/v1
+  ```
+  
 ## 1. Scale apps natively
 
 Kubernetes can deploy an individual pod to run an application but when you
