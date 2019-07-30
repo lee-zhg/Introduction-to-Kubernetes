@@ -178,6 +178,8 @@ To update and roll back:
    guestbook-768cc55c78   0         0         0         3h
    ```
 
+## 3. Clean up
+
 Before we continue, let's delete the application so we can learn about
 a different way to achieve the same results:
 
