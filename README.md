@@ -1,4 +1,4 @@
-# IBM Cloud Container Service Lab
+# Introduction to Kubernetes
 
 <img src="https://kubernetes.io/images/favicon.png" width="200">
 
