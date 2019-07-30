@@ -24,7 +24,7 @@ as well as the configuration files we'll use to deploy the pieces of the applica
   ```
   $ cd guestbook/v1
   ```
-  
+
 ## 1. Scale apps natively
 
 Kubernetes can deploy an individual pod to run an application but when you
@@ -44,6 +44,8 @@ For Object that we create we need to provide the `apiVersion` you are using
 to create the object, `kind` of the object we are creating and the `metadata`
 about the object such as a `name`, set of `labels` and optionally `namespace`
 that this object should belong.
+
+1. Review sample deployment configuration
 
 Consider the following deployment configuration for guestbook application
 
@@ -82,7 +84,7 @@ with a pod containing a single container running the image
 and Kubernetes tries to make sure that at least three active pods are running at
 all times.
 
-- Create guestbook deployment
+1. Create guestbook deployment
 
    To create a Deployment using this configuration file we use the
    following command:
@@ -92,7 +94,7 @@ all times.
    deployment.apps/guestbook-v1 created
    ```
 
-- List the pod with label app=guestbook
+1. List the pod with label app=guestbook
 
   We can then list the pods it created by listing all pods that
   have a label of "app" with a value of "guestbook". This matches
@@ -103,8 +105,8 @@ all times.
    $ kubectl get pods -l app=guestbook
    ```
 
-When you change the number of replicas in the configuration, Kubernetes will
-try to add, or remove, pods from the system to match your request. To can
+1. When you change the number of replicas in the configuration, Kubernetes will
+try to add, or remove, pods from the system to match your request. You can
 make these modifications by using the following command:
 
    ```console
@@ -119,7 +121,24 @@ Deployment that Kubernetes knows about, not just the ones we chose to
 specify when we create it. Also notice that it now contains the `status`
 section mentioned previously.
 
-You can also edit the deployment file we used to create the Deployment
+1. Make change to the configuration.
+
+Find the following section in the configuration.
+
+  ```
+  spec:
+  progressDeadlineSeconds: 600
+  replicas: 3
+  ```
+And change it to 
+  ```
+  spec:
+  progressDeadlineSeconds: 600
+  replicas: 3
+  ```
+This changes the deployment to 5 replica from 3.
+
+1. You can also edit the deployment file we used to create the Deployment
 to make changes. You should use the following command to make the change
 effective when you edit the deployment locally.
 
@@ -130,7 +149,9 @@ effective when you edit the deployment locally.
 This will ask Kubernetes to "diff" our yaml file with the current state
 of the Deployment and apply just those changes.
 
-We can now define a Service object to expose the deployment to external
+In `guestbook-deployment.yaml` file, it only defines 3 replica. So, the last action reversed the previous changes which increased replica to 5.
+
+1. We can now define a Service object to expose the deployment to external
 clients.
 
 **guestbook-service.yaml**
@@ -157,19 +178,19 @@ application.  In this case, we are setting up a route from port 3000 on the
 cluster to the "http-server" port on our app, which is port 3000 per the
 Deployment container spec.
 
-- Let us now create the guestbook service using the same type of command
+1. Let us now create the guestbook service using the same type of command
   we used when we created the Deployment:
 
   ` $ kubectl create -f guestbook-service.yaml `
 
-- Test guestbook app using a browser of your choice using the url
-  `<your-cluster-ip>:<node-port>`
-
-  Remember, to get the `nodeport` and `public-ip` use:
+1. Locate the `nodeport` and `public-ip`. Run ammand
 
   `$ kubectl describe service guestbook`
   and
   `$ ibmcloud cs workers <name-of-cluster>`
+
+1. Test guestbook app using a browser of your choice using the url
+  `<your-cluster-ip>:<node-port>`
 
 # 2. Connect to a back-end service.
 
