@@ -9,6 +9,7 @@ from the previous lab. If you deleted it, recreate it using:
 
 ```console
 $ kubectl run guestbook --image=ibmcom/guestbook:v1
+$ kubectl expose deployment guestbook --type="NodePort" --port=3000
 ```
 
 ## 1. Scale apps with replicas
