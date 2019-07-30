@@ -134,7 +134,7 @@ And change it to
   ```
   spec:
   progressDeadlineSeconds: 600
-  replicas: 3
+  replicas: 5
   ```
 This changes the deployment to 5 replica from 3.
 
@@ -185,9 +185,11 @@ Deployment container spec.
 
 9. Locate the `nodeport` and `public-ip`. Run ammand
 
-  `$ kubectl describe service guestbook`
+  ```
+  $ kubectl describe service guestbook
   and
-  `$ ibmcloud cs workers <name-of-cluster>`
+  $ ibmcloud cs workers <name-of-cluster>
+  ```
 
 10. Test guestbook app using a browser of your choice using the url
   `<your-cluster-ip>:<node-port>`
