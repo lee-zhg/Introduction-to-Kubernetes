@@ -4,7 +4,11 @@
 
 ## Lab overview
 
-[Lab 0](Lab0): Setup - if you do not have access to a kubernetes environment, follow the suggestions here to get one. If you are in an IBM workshop and have already signed in to your kubernetes cluster, skip this lab and start with [Lab 1](Lab1).
+[Provision Kubernetes Cluster](Lab0): Setup - if you do not have access to a kubernetes environment, follow the instructions here to get one. It may take 15-30 minutes to provision a Kubernetes cluster. So, create the cluster as your first task in the session. Otherwise, you may skip these steps.
+
+[Pre-requisites](Lab0.1): Setup - Pre-requisites.
+
+[Connect to your Kubernetes Cluster](Lab0.2): Setup - complete these steps to connect to your Kubernetes cluster.
 
 [Lab 1](Lab1): This lab walks through creating and deploying a simple "guestbook" app written in Go as a net/http Server and accessing it.
 
