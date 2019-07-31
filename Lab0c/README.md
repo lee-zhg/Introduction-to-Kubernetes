@@ -7,7 +7,7 @@ Complete steps in this section to connect to your Kubernetes cluster.
 2. Login to [Kubernetes service in IBM Cloud](https://cloud.ibm.com/kubernetes/clusters).
 
 3. Select your Kubernetes luster.
-
+ 
 4. Navigate to `Access` tab.
 
 ![access-cluster](../images/access-cluster.png)
