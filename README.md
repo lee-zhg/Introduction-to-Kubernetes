@@ -4,11 +4,11 @@
 
 ## Lab overview
 
-[Provision Kubernetes Cluster](Lab0): Setup - if you do not have access to a kubernetes environment, follow the instructions here to get one. It may take 15-30 minutes to provision a Kubernetes cluster. So, create the cluster as your first task in the session. Otherwise, you may skip these steps.
+[Lab 0a](Lab0a): Setup - Provision Kubernetes Cluster. If you do not have access to a kubernetes environment, follow the instructions here to get one. It may take 15-30 minutes to provision a Kubernetes cluster. So, create the cluster as your first task in the session. Otherwise, you may skip these steps.
 
-[Pre-requisites](Lab0.1): Setup - Pre-requisites.
+[Lab 0b](Lab0b): Setup - Pre-requisites.
 
-[Connect to your Kubernetes Cluster](Lab0.2): Setup - complete these steps to connect to your Kubernetes cluster.
+[Lab 0c](Lab0c): Setup - Connect to your Kubernetes Cluster. Complete these steps to connect to your Kubernetes cluster.
 
 [Lab 1](Lab1): This lab walks through creating and deploying a simple "guestbook" app written in Go as a net/http Server and accessing it.
 
