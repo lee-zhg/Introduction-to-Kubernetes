@@ -1,5 +1,5 @@
 # Lab 0a. Set up your kubernetes environment
-
+ 
 For the hands-on labs in this tutorial repository, you will need a kubernetes cluster from the IBM Cloud Kubernetes Service or any accessable Kubernetes cluster. 
 
 It may take 15-30 minutes to provision a Kubernetes cluster. So, create the cluster before any task in the session.
