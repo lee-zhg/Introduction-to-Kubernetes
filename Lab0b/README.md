@@ -3,7 +3,7 @@
 During this session, you will need to have CLI tools installed on your workstation. If you already have these tools installed, you can skip to the next section.
 
 > Note: You need either Mac, Linux or Windows 10 (or later) workstation during this lab. Windows 7 platform is not recommended.
-
+ 
 
 ## Obtaining and installing the CLI tools on non-Windows 7 platform
 
