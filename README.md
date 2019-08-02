@@ -34,7 +34,7 @@ This lab walks through creating and deploying a simple "guestbook" app written i
 
 [Follow the lab instructions here](Lab1)
 
-### Lab 2 - Scaling application via CLI tool
+### Lab 2 - Scaling and updating deployment via CLI tool
 
 Builds on lab 1 to expand to a more resilient setup which can survive having containers fail and recover. Lab 2 will also walk through basic services you need to get started with Kubernetes and the IBM Cloud Container Service.
 
