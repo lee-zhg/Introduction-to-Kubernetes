@@ -13,7 +13,7 @@
 
     If you have access to a kubernetes environment, you may skip these steps.
 
-    [Follow the lab instructions here](Lab0a)
+    [Follow the lab instructions here](https://github.com/lee-zhg/create-k8s-cluster)
 
 1. CLI pre-requisites
 
