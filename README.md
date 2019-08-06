@@ -17,7 +17,7 @@
 
 1. CLI pre-requisites
 
-    Complete these steps to install required CLI tools.
+    Complete these steps to install required CLI tools on your local machine.
 
     [Follow the lab instructions here](Lab0b)
 
