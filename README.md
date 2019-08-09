@@ -2,8 +2,8 @@
 
 <img src="https://kubernetes.io/images/favicon.png" width="200">
 
+The instructions were adapted from https://github.com/IBMAppModernization/kube101.
 
-## Workshop Flow
 
 ### Prerequisites
 
