@@ -138,7 +138,17 @@ And change it to
   ```
 This changes the deployment to 5 replica from 3.
 
-6. You can also edit the deployment file we used to create the Deployment
+6. Save the change.
+
+7. Verify your change by executing
+
+  ```
+  kubectl get pods
+  ```
+
+  Before the change, you had 3 pods. Now, you should have 5.
+
+8. You can also edit the deployment file we used to create the Deployment
 to make changes. You should use the following command to make the change
 effective when you edit the deployment locally.
 
@@ -151,7 +161,7 @@ of the Deployment and apply just those changes.
 
 In `guestbook-deployment.yaml` file, it only defines 3 replica. So, the last action reversed the previous changes which increased replica to 5.
 
-7. We can now define a Service object to expose the deployment to external
+9. We can now define a Service object to expose the deployment to external
 clients.
 
 **guestbook-service.yaml**
@@ -178,12 +188,12 @@ application.  In this case, we are setting up a route from port 3000 on the
 cluster to the "http-server" port on our app, which is port 3000 per the
 Deployment container spec.
 
-8. Let us now create the guestbook service using the same type of command
+10. Let us now create the guestbook service using the same type of command
   we used when we created the Deployment:
 
   ` $ kubectl create -f guestbook-service.yaml `
 
-9. Locate the `nodeport` and `public-ip`. Run ammand
+11. Locate the `nodeport` and `public-ip`. Run ammand
 
   ```
   $ kubectl describe service guestbook
@@ -191,7 +201,7 @@ Deployment container spec.
   $ ibmcloud cs workers <name-of-cluster>
   ```
 
-10. Test guestbook app using a browser of your choice using the url
+12. Test guestbook app using a browser of your choice using the url
   `<your-cluster-ip>:<node-port>`
 
 # 2. Connect to a back-end service
