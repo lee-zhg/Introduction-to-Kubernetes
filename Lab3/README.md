@@ -317,7 +317,7 @@ manage data reads. In order to scale the database we use the pattern where
 we can scale the reads using redis slave deployment which can run several
 instances to read. Redis slave deployments is configured to run two replicas.
 
-    ![w_to_master-r_to_slave](../images/Master-Slave.png)
+  ![w_to_master-r_to_slave](../images/Master-Slave.png)
 
     **redis-slave-deployment.yaml**
 
