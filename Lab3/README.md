@@ -304,13 +304,13 @@ guestbook application can connect to it through DNS lookup.
 
 9. Test guestbook app using a browser of your choice using the url: `<your-cluster-ip>:<node-port>`. 
   
-  > **Note, Make sure you add couple of entries on the application UI. For example, `hello world` and `welcome to the Kube workshop`.**
+    > **Note, Make sure you add couple of entries on the application UI. For example, `hello world` and `welcome to the Kube workshop`.**
   
     You can see now that if you open up multiple browsers and refresh the page to access the different copies of guestbook that they all have a consistent state. All instances write to the same backing persistent storage, and all instances read from that storage to display the guestbook entries that have been stored.
 
     We have our simple 3-tier application running but we need to scale the application if traffic increases. Our main bottleneck is that we only have one database server to process each request coming though guestbook. One simple solution is to separate the reads and write such that they go to different databases that are replicated properly to achieve data consistency.
 
-    ![rw_to_master](../images/Master.png)
+  ![rw_to_master](../images/Master.png)
 
 10. Create a deployment named 'redis-slave' that can talk to redis database to
 manage data reads. In order to scale the database we use the pattern where
