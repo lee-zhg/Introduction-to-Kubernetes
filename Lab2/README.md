@@ -183,9 +183,17 @@ To update and roll back:
 Before we continue, let's delete the application so we can learn about
 a different way to achieve the same results:
 
- To remove the deployment, use `kubectl delete deployment guestbook`.
+ To remove the deployment, 
+ 
+```
+kubectl delete deployment guestbook
+```
 
- To remove the service, use `kubectl delete service guestbook`.
+ To remove the service, 
+    
+```
+kubectl delete service guestbook
+```
 
 Congratulations! You deployed the second version of the app. Lab 2
 is now complete. Continue to the [next lab of this course](../Lab3/README.md).
