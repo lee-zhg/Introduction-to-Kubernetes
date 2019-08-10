@@ -4,15 +4,30 @@ Complete steps in this section to connect to your Kubernetes cluster.
 
 1. Open a terminal window or command window.
 
-2. Login to [Kubernetes service in IBM Cloud](https://cloud.ibm.com/kubernetes/clusters).
+2. Set an environment variable
 
-3. Select your Kubernetes cluster.
+    ```
+    export USERNAME=user###
+    ```
 
-4. Navigate to `Access` tab.
+    > **Note: replace ### with your assigned ID**
+
+3. Install the kubernetes and container registry plugins:
+    ```
+    ibmcloud plugin install kubernetes-service -r Bluemix    
+    
+    ibmcloud plugin install container-registry -r Bluemix
+    ```
+
+4. Login to [Kubernetes service in IBM Cloud](https://cloud.ibm.com/kubernetes/clusters).
+
+5. Select your Kubernetes cluster.
+
+6. Navigate to `Access` tab.
 
 ![access-cluster](../images/access-cluster.png)
 
-5. Complete all steps in the section `After your cluster provisions, gain access`.
+7. In the above terminal window, complete all steps in the section `After your cluster provisions, gain access`.
 
 
 
