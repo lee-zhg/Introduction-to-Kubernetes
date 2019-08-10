@@ -4,6 +4,8 @@ Complete steps in this section to connect to your Kubernetes cluster.
 
 1. Open a terminal window or command window.
 
+    > **Note: use a web terminal if you attend a workshop**
+
 2. Set an environment variable
 
     ```
