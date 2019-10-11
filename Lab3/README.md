@@ -14,6 +14,7 @@ Before we work with the application,
 1. Clone a github repo:
 
     ```
+    cd  ~
     $ git clone https://github.com/IBM/guestbook.git
     ```
 
